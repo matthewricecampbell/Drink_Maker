@@ -1,10 +1,10 @@
 Project Name: 
 	
-	DRINK MAKER
+	COCKTAIL COMPANION
 
 Project Overview: 
 	
-	DRINK MAKER will take an input of liquor and extras and output drink ideas:
+		COCKTAIL COMPANION will take an input of liquor and extras and output drink ideas:
 
  EX:
 	INPUT:
