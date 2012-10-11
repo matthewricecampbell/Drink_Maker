@@ -1,0 +1,182 @@
+a = the paterson house snob(like the fancy stuff. interested in buying extra ingredients)
+b = the madman(I like the classics and am open to buying somethings. interested in buying extra ingredients)
+c = the 49er(I'm throwing a party and want a fun drink idea.  interested in buying extra ingredients)
+d = the dumbdumb(I like it simple and sweet. not iterested in buying extra ingredients)
+e = the sunday sipper(Heres what I've got and that's all I've got. not iterested in buying extra ingredients)
+
+
+ABSINTHE
+	a => 
+"Round Robin 
+1 large egg white
+1 ounce absinthe
+1 ounce brandy
+1 teaspoon superfine sugar or Rich Simple Syrup
+Dash blood orange bitters
+Ice" 
+	b =>
+"DESIRE
+1/4 Absinthe Original
+1/2 tablespoon sugar
+3/4 lemon juice
+Shake well and pour into cocktail glass."
+	c =>
+HEMINGWAY
+1 shot Absinthe Original
+champagne
+Pour absinthe into flute glass over ice. Top up with champagne.
+	d =>
+ATOMIC BOMB
+1/2 Absinthe Original
+1/2 brandy
+	e =>
+ABSINTHE MINDED
+3 oz Bombay Saphire gin
+1/2 oz Absinthe Original
+1/2 oz Grand Marnier orange liqueur
+dry vermouth
+1 orange peel
+
+
+BRANDY
+	a =>
+"Netherland
+2 ounces brandy
+2/3 ounce orange curacao
+1 dash orange bitters"
+	b =>
+SIDECAR
+"3/4 ounce brandy
+3/4 ounce lemon juice
+1 1/2 ounces cognac"
+c =>
+	d =>
+"Brandy Alexander
+1 ounce brandy
+1 ounce creme de cacao
+1 ounce heavy cream"
+	e =>
+"Brandy and Soda
+2 or 3 ounces brandy
+club soda"
+
+GIN
+	a =>
+"Moscow Mule
+1/2 ounce lime juice
+2 ounces vodka
+4 to 6 ounces ginger beer"
+	b =>
+Old-Fashioned Gin Cocktail
+1 sugar cube
+2 dashes Angostura bitters
+1 teaspoon water
+2 ounces gin
+	c =>
+Hearst
+2 ounces London dry gin
+1/2 ounce Italian vermouth
+1 dash orange bitters
+1 dash Angostura bitters
+	d =>
+Gin and Tonic
+2 or 3 ounces London dry gin
+1 healthy wedge of lime(s)
+6 ounces tonic water
+	e =>
+Silver Fizz
+2 ounces London dry gin
+1 ounce lemon juice
+1 teaspoon superfine sugar
+1 egg whites
+
+RUM
+	a =>
+Ace of Clubs
+2 ounces golden rum
+1/2 ounce white creme de cacao
+1/2 ounce lime juice
+1/2 teaspoon simple syrup
+	b =>
+Vera Rush
+2 ounces dark rum
+1/2 ounce pineapple juice
+	c =>
+Rum and Coconut Water
+2 ounces golden rum
+2 to 4 ounces coconut water
+	d =>
+Honey Bee
+1/2 tablespoon honey
+1/2 tablespoon water
+2 ounces white rum
+1/2 ounce lemon juice
+	e =>
+Daiquiri
+2 ounces white rum
+1/2 teaspoon superfine sugar
+1/2 ounce lime juice
+
+TEQUILA
+	a =>
+Tequila Sunrise
+1 1/2 ounces tequila
+3 ounces orange juice
+1 teaspoon grenadine
+	b =>
+La Paloma
+2 ounces tequila
+1/2 ounce lime juice
+pinch of salt
+grapefruit soda
+Glass Type: Collins glass
+	c =>
+Margie
+2 ounces silver tequila
+1 ounce Cointreau
+1 ounce lime juice
+Glass Type: cocktail glass
+	d =>
+Chalino Special
+3 ounces white tequila
+1/2 tablespoon creme de cassis
+1/2 ounce lemon juice
+1/2 ounce lime juice
+1/2 tablespoon simple syrup
+Glass Type: cocktail glass
+	e =>
+Shoot that shit!
+VODKA
+a =>
+	b =>
+Vodka Martini
+3 ounces vodka
+1 teaspoon French vermouth
+c =>
+d =>
+e =>
+WHISKEY
+	a =>
+Brain-Duster
+1 ounce rye whisky
+1 ounce absinthe
+1 ounce Italian vermouth
+1 dash Angostura bitters
+	b =>
+Manhattan
+2 ounces rye whisky
+1 ounce Italian vermouth
+2 dashes Angostura bitters
+	c =>
+Algonquin
+1 1/2 ounces rye whisky
+3/4 ounce French vermouth
+3/4 ounce pineapple juice
+	d =>
+Whiskey Sour
+2 ounces bourbon
+2/3 ounce lemon juice
+1 teaspoon superfine sugar
+	e =>
+Whiskey & Ice
+Put that whiskey on some ice!

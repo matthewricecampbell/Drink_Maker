@@ -1,8 +1,9 @@
 As the Paterson House Snob
-In order to find exciting new drinks ideas
+In order to find exciting new drinks ideas with ingredients I like
 I want to see lots of drink recepies with bitters and eggs
 A C : 
 	-return recepies including bitters and eggs
+	-do not return simple dumb dumb recepies
 
 	Drink of choice: Round Robin
 	INGREDIENTS
