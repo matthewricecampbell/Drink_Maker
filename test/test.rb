@@ -5,20 +5,28 @@ require 'Cocktail_Companion'
  class Cocktail_Companion_Test< Test::Unit::TestCase
 
    def test_01_spirits
-    ingredient_lib
-     assert_equal 'Absinthe' , ingredients['spirits'][1] 
+    	c = Cocktail_Maker.new 
+     	assert_equal 'Absinthe' , c.ingredients['spirits'][1] 
    end
     def test_02_mixers
-    ingredient_lib
-     assert_equal 'club soda' , ingredients['mixers'][1] 
+    	c = Cocktail_Maker.new 
+		assert_equal 'club soda' , c.ingredients['mixers'][1] 
    end
-   # def test_03_spirits
-   #  ingredient_libary
-   #   assert_equal 'Absinthe' , puts ingredients['spirits'][1] 
-   # end
-   # def test_04_mixers
-   #  ingredient_libary
-   #   assert_equal 'club soda' , puts ingredients['mixers'][1] 
-   # end
+   def test_03_fruits_juices
+    	c = Cocktail_Maker.new 
+		assert_equal 'apple cider' , c.ingredients['fruits_juices'][1] 
+   end
+   def test_04_liqueurs_bitters
+  c = Cocktail_Maker.new
+     assert_equal 'absinthe' , c.ingredients['liqueurs_bitters'][1] 
+   end
+   def test_05_syrups
+    c = Cocktail_Maker.new
+     assert_equal 'cane syrup' , c.ingredients['syrups'][1] 
+   end 
+   def test_05_syrups
+    c = Cocktail_Maker.new
+     assert_equal 'allspice' , c.ingredients['pantry_items'][1] 
+   end
 
 end
