@@ -6,17 +6,17 @@ class Cocktail_Maker
         @stdout = stdout
     end
     def instructions
-        @stdout.puts "Welcome to Cocktail Companion!\n Please tell me the ingredients you have on hand in this format (example entry: 1 2 3) then press return to move thorugh the categories!"
+        @stdout.puts "Welcome to Cocktail Companion!\n Please tell me the ingredients you have on hand in this format example entry:\n 1 2 3\n Then press return to move thorugh the categories!"
     end 
     
     def ingredients
         {
             'spirits' => {1=>'Absinthe',2=>'Brandy',3=>'Gin',4=>'Rum',5=>'Scotch',6=>'Southern Comfort',7=>'Tequila',8=>'Vodka',9=>'Whiskey'},        
-            'mixers' => {1=>'Club soda',2=>'Coca-Cola',3=>'Coconut cream',4=>'coconut water',5=>'Coffee',6=>'Espresso',7=>'Ginger Ale',8=>'Ginger Beer',9=>'Tonic Water'}, 
+            'mixers' => {1=>'Club Soda',2=>'Coca-Cola',3=>'Coconut Cream',4=>'Coconut Water',5=>'Coffee',6=>'Espresso',7=>'Ginger Ale',8=>'Ginger Beer',9=>'Tonic Water'}, 
             'fruits_juices' => {1=>'Apple Cider',2=>'Cranberry Juice',3=>'Grapefruit Juice',4=>'Grapefruit',5=>'Hard Cider',6=>'Lemon Juice',7=>'Lemon',8=>'Lime Juice',9=>'Lime',10=>'Orange Juice',11=>'Orange',12=>'Papaya Juice',13=>'Pineapple Juice',14=>'pineapple',15=>'raspberries',16=>'strawberries',17=>'tomato juice'}, 
-            'liqueurs_bitters' => {1=>'absinthe',2=>'angostura bitters',3=>'anisette',4=>'apricot liqueur',5=>'benedictine',6=>'bitters',7=>'chambord liqueur',8=>'cointreau',9=>'creme de cacao',10=>'creme de cassis',11=>'curacao',12=>'drambuie',13=>'grand marnier',14=>'creme de menthe',15=>'kahlua',16=>'maraschino',17=>'orange bitters',18=>'orange curacao',19=>'pernod',20=>'Peychauds bitters',21=>'Yellow chartreuse',22=>'Triple Sec'}, 
-            'syrups' => {1=>'cane syrup',2=>'grenadine',3=>'lemon syrup',4=>'orgeat syrup',5=>'raspberry syrup',6=>'Roses lime juice',7=>'simple syrup'}, 
-            'pantry_items' => {1=>'allspice',2=>'brown sugar',3=>'butter',4=>'cinnamon sticks',5=>'cloves',6=>'eggs',7=>'heavy cream',8=>'honey',9=>'horseradish',10=>'maple sugar',11=>'milk',12=>'mint',13=>'nutmeg',14=>'pepper',15=>'salt',16=>'superfine sugar',17=>'Tabasco',18=>'tea',19=>'whipped cream',20=>'worcestershire sauce'} 
+            'liqueurs_bitters' => {1=>'Absinthe',2=>'Angostura Bitters',3=>'Anisette',4=>'Apricot Liqueur',5=>'Benedictine',6=>'Bitters',7=>'Chambord Liqueur',8=>'Cointreau',9=>'Creme De Cacao',10=>'Creme De Cassis',11=>'Curacao',12=>'Drambuie',13=>'Grand Marnier',14=>'Creme De Menthe',15=>'Kahlua',16=>'Maraschino',17=>'Orange Bitters',18=>'Orange Curacao',19=>'Pernod',20=>'Peychauds Bitters',21=>'Yellow Chartreuse',22=>'Triple Sec'}, 
+            'syrups' => {1=>'Cane Syrup',2=>'Grenadine',3=>'Lemon Syrup',4=>'Orgeat Syrup',5=>'Raspberry Syrup',6=>'Roses Lime Juice',7=>'Simple Syrup'}, 
+            'pantry_items' => {1=>'Allspice',2=>'Brown Sugar',3=>'Butter',4=>'Cinnamon Sticks',5=>'Cloves',6=>'Egg',7=>'Heavy Cream',8=>'Honey',9=>'Horseradish',10=>'Maple Sugar',11=>'Milk',12=>'Mint',13=>'Nutmeg',14=>'Pepper',15=>'Salt',16=>'Superfine Sugar',17=>'Tabasco',18=>'Tea',19=>'Whipped Cream',20=>'Worcestershire Sauce'} 
         }
     end
     
@@ -50,7 +50,13 @@ class Cocktail_Maker
         CSV.open("drink_recipes_database.csv", "r").each do |row|
             drink_recipe_array = []
             row_string = row.join("")
-            if @spirits.any? {|spirit| row_string.include?(spirit)} || @mixers.any? {|mixer| row_string.include?(mixer)} || @fruits_juices.any? {|fruits_juices| row_string.include?(fruits_juices)} || @syrups.any? {|syrups| row_string.include?(syrups)}|| @pantry_items.any? {|pantry_items| row_string.include?(pantry_items)}
+            if @spirits.any? {|spirit| row_string.include?(spirit)} && @fruits_juices.any? {|fruits_juices| row_string.include?(fruits_juices)} && @liqueurs_bitters.any? {|liqueurs_bitters| row_string.include?(liqueurs_bitters)} && @syrups.any? {|syrups| row_string.include?(syrups)}
+                drink_recipe_array += row
+                puts row 
+            elsif (@spirits.any? {|spirit| row_string.include?(spirit)} && @mixers.any? {|mixer| row_string.include?(mixer)}) || (@spirits.any? {|spirit| row_string.include?(spirit)} && @fruits_juices.any? {|fruits_juices| row_string.include?(fruits_juices)}) || (@spirits.any? {|spirit| row_string.include?(spirit)}&& @syrups.any? {|syrups| row_string.include?(syrups)}) || (@spirits.any? {|spirit| row_string.include?(spirit)} && @pantry_items.any? {|pantry_items| row_string.include?(pantry_items)})
+                drink_recipe_array += row
+                puts row
+            elsif @spirits.any? {|spirit| row_string.include?(spirit)} #need to do: only put 3 recipes
                 drink_recipe_array += row
                 puts row
             end
