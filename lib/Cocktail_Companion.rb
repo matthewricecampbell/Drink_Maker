@@ -50,6 +50,7 @@ class Cocktail_Maker
         CSV.open("drink_recipes_database.csv", "r").each do |row|
             drink_recipe_array = []
             row_string = row.join("")
+            #if this true shouldn't the statement end? It seems to be going through elsif's
             if @spirits.any? {|spirit| row_string.include?(spirit)} && @fruits_juices.any? {|fruits_juices| row_string.include?(fruits_juices)} && @liqueurs_bitters.any? {|liqueurs_bitters| row_string.include?(liqueurs_bitters)} && @syrups.any? {|syrups| row_string.include?(syrups)}
                 drink_recipe_array += row
                 puts row 
