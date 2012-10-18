@@ -75,8 +75,12 @@ class Cocktail_Maker
         CSV.open("drink_recipes_database.csv", "r").each do |row|#open csv file/push each row though one at a time
             @row_string = row.join("")#create instance of row_string that is row.join("") 
             if spirit_found_in_row #if spirit
-                if (fruit_juices_found_in_row && liquers_bitters_found_in_row && syrup_found_in_row) #if spirit & fj's & lb's & sy's match
-                    drink_recipe_array << {:score => 4, :row => row} #shovel matching rows into the drink_recipe_array with a score of 4
+                if (fruit_juices_found_in_row && liquers_bitters_found_in_row && syrup_found_in_row && mixer_found_in_row)
+                    drink_recipe_array << {:score => 6, :row => row}
+                elsif (fruit_juices_found_in_row && liquers_bitters_found_in_row && syrup_found_in_row) #if spirit & fj's & lb's & sy's match
+                    drink_recipe_array << {:score => 5, :row => row} #shovel matching rows into the drink_recipe_array with a score of 4
+                elsif (mixer_found_in_row && fruit_juices_found_in_row)
+                    drink_recipe_array << {:score => 4, :row => row}
                 elsif (mixer_found_in_row || #if spirit & mixer
                        fruit_juices_found_in_row || # OR if spirit & fj
                        syrup_found_in_row || # OR if spirit & syrup
