@@ -1,20 +1,24 @@
 require ('csv')
 
-def spirit_finder
+def recipe_finder
 CSV.open("drink_recipes_database.csv", "r").each do |row|
- spirit_array = []
- spirit_array += row
- spirit_array[6]
-
-    end
+ drink_recipe_array = []
+ drink_recipe_array += row
+ if drink_recipe_array.include?(/Southern/)
+ 	puts row
 end
-spirit_finder
-
-
-#prints recipes
-def recipe_printer
-drinks = CSV.parse(File.read('drink_recipes_database.csv'))
-puts drinks[3]
+	end
 end
+
+recipe_finder
+
+
+
+# #prints recipes
+# def recipe_printer
+# drinks = CSV.parse(File.read('drink_recipes_database.csv'))
+# puts drinks[3]
+# end
+# recipe_printer
 
 
